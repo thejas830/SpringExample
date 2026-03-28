@@ -1,12 +1,19 @@
 package com.example.componentscan;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 // @Component - also works by creating been by converting class name into lower case
 @Component("employee")
 public class Employee {
     private int employeeId;
+
+    @Value("Name")
     private String Fname;
+
+    @Value("${java.home}")
     private String Lname;
+
+    @Value("#{4*4}")
     private double salary;
 
     public int getEmployeeId() {
