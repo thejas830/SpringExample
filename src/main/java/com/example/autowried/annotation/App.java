@@ -11,5 +11,8 @@ public class App {
 
         Manager manager = context.getBean("manager",Manager.class);
         System.out.println(manager);
+
+        Job job = context.getBean("job", Job.class);
+        System.out.println(job);
     }
 }
